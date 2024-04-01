@@ -13,6 +13,10 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 #root {
   max-width: 50rem;
   margin: 2rem auto;
@@ -43,5 +47,16 @@ input {
   margin-bottom: 1rem;
   font-size: 1rem;
   color: #07302a;
+}
+
+.button {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #338196;
+  background-color: #338196;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
