@@ -60,3 +60,10 @@ input {
   margin-right: 5px;
 }
 
+.custom.button{
+  border: 1px solid #3b802a;
+  background-color: #8ad38b;
+  color: #35535b;
+  font-weight: bold;
+}
+

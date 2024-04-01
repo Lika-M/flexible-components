@@ -1,5 +1,6 @@
 import Input from './components/Input.tsx';
 import Button from './components/Button.tsx';
+import CustomButton from './components/CustomButton.tsx';
 import './App.css'
 
 function App() {
@@ -13,8 +14,12 @@ function App() {
         <Input label='Button' id='button' type='submit' disabled />
       </>
       <>
-        <Button el='button'/>
-        <Button el='link' href='https://dir.bg'/>
+        <Button el='button' />
+        <Button el='link' href='https://dir.bg' />
+      </>
+      <>
+        <CustomButton disabled />
+        <CustomButton href='https://dir.bg' />
       </>
     </main>
   )
