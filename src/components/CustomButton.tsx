@@ -1,15 +1,15 @@
-import { ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from "react";
 
 
 // No need to specify element, but attributes that will/never use
 // Otherwise they are mixed between the two types
 type CustomButtonProps = ComponentPropsWithoutRef<'button'> & {
     href?: never;
-    disabled?: true;
+    target?: true;
 }
 type CustomLinkProps = ComponentPropsWithoutRef<'a'>  & {
     href?: string;
-    disabled?: never;
+    target?: never;
 }
 
 // Util function: if returns true  --> props is /return type/
