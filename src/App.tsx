@@ -15,8 +15,17 @@ function App() {
   const customForm = useRef<HTMLFormElement>(null)
 
   function handleSave (data:unknown){
-    const enteredData = data as {name: string, age: number};
-    console.log(enteredData);
+    // const enteredData = data as {name: string, age: number};
+    // console.log(enteredData);
+
+    if (
+      !data ||
+      typeof data !== 'object' ||
+      !('name' in data) ||
+      !('age' in data)
+    ) {
+        return;
+    }
     customForm.current?.clear();
   }
 
