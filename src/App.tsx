@@ -1,4 +1,4 @@
-// import { useRef } from 'react';
+import { useRef } from 'react';
 
 import Input from './components/Input.tsx';
 // import InputRef from './components/Input.tsx';
@@ -12,9 +12,12 @@ function App() {
 
   // const inputEl = useRef<HTMLInputElement>(null);
 
+  const customForm = useRef<HTMLFormElement>(null)
+
   function handleSave (data:unknown){
     const enteredData = data as {name: string, age: number};
-    console.log(enteredData)
+    console.log(enteredData);
+    customForm.current?.clear();
   }
 
   return (
@@ -56,7 +59,7 @@ function App() {
       <br />
       </section>
       <section>
-        <Form onSave={handleSave}>
+        <Form onSave={handleSave} ref={customForm}>
           <Input label='Name' id='name' type='text' />
           <Input label='Age' id='age' type='number' />
           <p><Button el='button'>Save</Button></p>
