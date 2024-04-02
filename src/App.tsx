@@ -1,4 +1,7 @@
+import { useRef } from 'react';
+
 import Input from './components/Input.tsx';
+import InputRef from './components/Input.tsx';
 import Button from './components/Button.tsx';
 import CustomButton from './components/CustomButton.tsx';
 import './App.css'
@@ -6,13 +9,17 @@ import Container from './components/Container.tsx';
 
 function App() {
 
+  const inputEl = useRef<HTMLInputElement>(null);
+
   return (
     <main>
       <>
         {/* different types with different props */}
         <Input label='Your name' id='name' type='text' />
         <Input label='Yor age' id='age' type='number' />
-        <Input label='Button' id='button' type='submit' disabled />
+        <Input label='Button' id='button' type='submit' disabled
+          className='container button' onClick={() => console.log('CLICKED')}
+        />
       </>
 
       <>
@@ -33,6 +40,10 @@ function App() {
         >
           Click me!
         </Container>
+      </>
+      <>
+      {/* doesn't combine with another input elements*/}
+        <InputRef id='test' label='Test' ref={inputEl} />
       </>
     </main>
   )
