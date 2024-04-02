@@ -20,20 +20,35 @@ a {
 #root {
   max-width: 50rem;
   margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+section:nth-child(1)  {
   padding: 2rem;
   background: linear-gradient(#35535b, #294a52);
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   color: white;
+}
+
+section:nth-child(2) {
+  padding: 2rem;
+  background-color: #8ad38b;
 }
 
 label {
   display: block;
   font-size: 0.85rem;
-  color: #bbe3dd;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0.35rem;
+}
+
+section:nth-child(1) label {
+  color: #bbe3dd;
+}
+
+section:nth-child(2) label {
+  color: #175c06;
 }
 
 input {
@@ -42,7 +57,7 @@ input {
   width: 100%;
   padding: 0.5rem;
   border-radius: 6px;
-  border: 1px solid #486560;
+  border: 1px solid #959a99;
   background-color: #daedea;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -60,15 +75,14 @@ input {
   margin-right: 5px;
 }
 
-.custom.button{
+.custom.button {
   border: 1px solid #3b802a;
   background-color: #8ad38b;
   color: #35535b;
   font-weight: bold;
 }
 
-.container.button{
+.container.button {
   border: 1px solid #fc6868;
   background-color: #e9813c;
 }
-

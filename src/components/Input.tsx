@@ -9,7 +9,7 @@ export default function Input({ id, label, ...rest }: InputProps) {
     return (
         <p>
             <label htmlFor={id}>{label}</label>
-            <input id={id} {...rest} />
+            <input id={id} name={id} {...rest} />
         </p>
     );
 }
